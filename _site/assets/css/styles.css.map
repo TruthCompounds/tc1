@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n",
+		".current {\n  color: green;\n}\n\nh1 {\n    text-align: center;\n    font-family: Arial, Helvetica, sans-serif;\n    font-weight: bold;\n}\n\np {\n    text-align: center;\n    font-family: Arial, Helvetica, sans-serif;\n    font-weight: normal;\n}\n"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,KAAK,GACb;;AAED,AAAA,EAAE,CAAC,EACC,UAAU,EAAE,MAAM,EAClB,WAAW,EAAE,4BAA4B,EACzC,WAAW,EAAE,IAAI,GACpB;;AAED,AAAA,CAAC,CAAC,EACE,UAAU,EAAE,MAAM,EAClB,WAAW,EAAE,4BAA4B,EACzC,WAAW,EAAE,MAAM,GACtB"
+}
