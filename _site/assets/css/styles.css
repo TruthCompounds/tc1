@@ -2,11 +2,26 @@
 
 h1 { text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
 
-p { text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: normal; }
+h3 { text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 20px; }
+
+p { text-align: left; font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 1.5vw; }
+
+li { font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 1.5vw; }
+
+.post { list-style-type: none; }
+
+.postdiv { max-width: 65%; margin: 0 auto; }
+
+.scroll-indicator { position: fixed; z-index: 1; width: 2%; background-color: #b9b9b9; }
+
+.scroll-indicator h2 { text-align: center; }
+
+.progress-container { height: 200px; border-style: solid; border-color: #727272; }
+
+.progress-bar { height: 200px; background: #0000003D; height: 0%; }
+
+.collapseBtn { margin: auto; display: flex; }
 
 /* Place your CSS styles in this file */
-h1 { text-align: center; font-family: "Arial", sans-serif; font-weight: bold; }
-
-p { text-align: center; font-family: "Arial", sans-serif; font-weight: normal; }
 
 /*# sourceMappingURL=styles.css.map */

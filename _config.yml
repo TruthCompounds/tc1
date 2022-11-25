@@ -22,3 +22,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+kramdown:
+  gfm_quirks: [paragraph_end]
+  hard_wrap: true

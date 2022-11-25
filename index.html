@@ -4,4 +4,19 @@ title: Home
 ---
 
 <h1> TRUTH COMPOUNDS </h1>
-<p>This is a blog Post</p>
+
+
+{% for item in site.posts %}
+	<div class="postdiv">
+		<li class="post">
+			<h3> {{ item.title }} </h3>
+			<button class="collapseBtn"
+				onclick="collapse('{{forloop.index0}}')">collapse</button>
+			<div id="{{forloop.index0}}">
+				{{ item.content }}
+			</div>
+
+		</li>	
+	</div>
+{% endfor %}
+
