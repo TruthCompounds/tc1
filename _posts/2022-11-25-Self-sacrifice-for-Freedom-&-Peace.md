@@ -4,8 +4,7 @@ title: "#2 - Self-sacrifice for Freedom & Peace"
 
 
 
-> What or whoever one is attached to, is ones master. 
-> --- Kapil Gupta
+> What or whoever one is attached to, is ones master. --- Kapil Gupta
  
 My Father is my master. 
 Cigarettes are my masters. 

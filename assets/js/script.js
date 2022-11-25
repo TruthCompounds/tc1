@@ -26,12 +26,12 @@ function collapse(index) {
 	if (disp === '') 
 	{
 		postContentDiv.style.display = 'none';
-		postContentBtn.innerText = 'REVEAL ▲';
+		postContentBtn.innerText = 'show ' + String.fromCodePoint(128065);
 	} 
 	else if (disp === 'none') 
 	{
 		postContentDiv.style.display = '';
-		postContentBtn.innerText = 'HIDE ▼';
+		postContentBtn.innerText = 'hide';
 	}
 	
 

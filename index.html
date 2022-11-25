@@ -9,15 +9,25 @@ title: Home
 {% for item in site.posts %}
 <div class="postdiv">
     <li class="post">
-        <h3> {{ item.title }} </h3>
-        <button class="collapseBtn"
-				id="b{{forloop.index0}}"
-                onclick="collapse('{{forloop.index0}}')">HIDE ▼</button>
+		<div class="grid-container">
+			<div class="grid-child">
+				<h3> {{ item.title }} </h3>
+			</div>
+			<div class="grid-child">
+				<span class="nowrap">
+					<button class="collapseBtn"
+							id="b{{forloop.index0}}"
+							onclick="collapse('{{forloop.index0}}')">
+						hide
+					</button>
+				</span>
+			</div>
+		</div>
         <div id="{{forloop.index0}}">
             {{ item.content }}
         </div>
     </li>
-	<hr>
 </div>
+<hr/>
 {% endfor %}
 

@@ -32,10 +32,12 @@ li {
 
 .post {
 	list-style-type: none;
+    margin: 2%;
 }
 
 .postdiv {
-	width: 65%;
+	width: 66%;
+    background-color: #f6f6f6;
 	//align-content: center;
 	margin: 0 auto;
 }
@@ -77,6 +79,11 @@ li {
 	border-radius: 20px;
 }
 
+hr {
+  width: 65%;
+  text-align: center;
+}
+
 @media screen and (max-width: 800px) {
   .postdiv {
     width: 90%; /* The width is 100%, when the viewport is 800px or smaller */
@@ -94,4 +101,20 @@ li {
   li {
 	  font-size: 4vw;
   }
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 9fr 1fr;
+}
+
+.grid-child {
+
+	display: flex;   
+	align-items: center;
+	justify-content: center;
+}
+
+.nowrap {
+	white-space: nowrap;
 }
