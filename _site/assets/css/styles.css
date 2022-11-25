@@ -1,6 +1,6 @@
 .current { color: green; }
 
-h1 { text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+h1 { text-align: center; font-size: 3vw; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
 
 h3 { text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 20px; }
 
@@ -12,7 +12,7 @@ li { font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 
 
 .postdiv { max-width: 65%; margin: 0 auto; }
 
-.scroll-indicator { position: fixed; z-index: 1; width: 2%; background-color: #b9b9b9; }
+.scroll-indicator { position: fixed; top: 1%; z-index: 1; width: 2%; background-color: #b9b9b9; }
 
 .scroll-indicator h2 { text-align: center; }
 
