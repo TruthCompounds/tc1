@@ -7,16 +7,17 @@ title: Home
 
 
 {% for item in site.posts %}
-	<div class="postdiv">
-		<li class="post">
-			<h3> {{ item.title }} </h3>
-			<button class="collapseBtn"
-				onclick="collapse('{{forloop.index0}}')">collapse</button>
-			<div id="{{forloop.index0}}">
-				{{ item.content }}
-			</div>
-
-		</li>	
-	</div>
+<div class="postdiv">
+    <li class="post">
+        <h3> {{ item.title }} </h3>
+        <button class="collapseBtn"
+				id="b{{forloop.index0}}"
+                onclick="collapse('{{forloop.index0}}')">HIDE ▼</button>
+        <div id="{{forloop.index0}}">
+            {{ item.content }}
+        </div>
+    </li>
+	<hr>
+</div>
 {% endfor %}
 

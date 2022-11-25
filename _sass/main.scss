@@ -13,7 +13,7 @@ h3 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-	font-size: 20px;
+	font-size: 2vw;
 }
 
 p {
@@ -35,7 +35,7 @@ li {
 }
 
 .postdiv {
-	max-width: 65%;
+	width: 65%;
 	//align-content: center;
 	margin: 0 auto;
 }
@@ -71,4 +71,27 @@ li {
 .collapseBtn {
 	margin: auto;
 	display: flex;
+	border: solid 1px black;
+	color: black;
+	background-color: white;
+	border-radius: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .postdiv {
+    width: 90%; /* The width is 100%, when the viewport is 800px or smaller */
+    margin: 0 5% 0 5%;
+  }
+  p {
+	  font-size: 4vw;
+  }
+  h1 {
+	  font-size: 8vw;
+  }
+  h3 {
+	  font-size: 6vw;
+  }
+  li {
+	  font-size: 4vw;
+  }
 }

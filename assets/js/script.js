@@ -21,14 +21,17 @@ function myFunction() {
 
 function collapse(index) {
 	var postContentDiv = document.getElementById(index);
+	var postContentBtn = document.getElementById('b' + index);
 	var disp = postContentDiv.style.display;
 	if (disp === '') 
 	{
 		postContentDiv.style.display = 'none';
+		postContentBtn.innerText = 'REVEAL ▲';
 	} 
 	else if (disp === 'none') 
 	{
 		postContentDiv.style.display = '';
+		postContentBtn.innerText = 'HIDE ▼';
 	}
 	
 

@@ -1,36 +1,36 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-	<link rel="stylesheet" href="/assets/css/styles.css">
-	<!-- generics -->
-	<link rel="icon" href="/assets/images/tc_favicon32.png" sizes="32x32">
-	<link rel="icon" href="/assets/images/tc_favicon128.png" sizes="128x128">
-	<link rel="icon" href="/assets/images/tc_favicon192.png" sizes="192x192">
-	<link rel="icon" href="/assets/images/tc_favicon228.png" sizes="228x228">
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <script src="/assets/js/script.js"></script>
+        <!-- generics -->
+        <link rel="icon" href="/assets/images/tc_favicon32.png" sizes="32x32">
+        <link rel="icon" href="/assets/images/tc_favicon128.png" sizes="128x128">
+        <link rel="icon" href="/assets/images/tc_favicon192.png" sizes="192x192">
+        <link rel="icon" href="/assets/images/tc_favicon228.png" sizes="228x228">
 
-	<!-- Android -->
-	<!--link rel="shortcut icon" sizes="196x196"
-	 href=“/path/to/favicon-196.png"-->
+        <!-- Android -->
+        <!--link rel="shortcut icon" sizes="196x196"
+         href=“/path/to/favicon-196.png"-->
 
-	 <!--iOS -->
-	<!--<link rel="apple-touch-icon" href="/path/to/favicon-120.png" sizes="120x120">-->
-	<!--<link rel="apple-touch-icon" href="path/to/favicon-152.png" sizes="152x152">-->
-	<link rel="apple-touch-icon" href="/assets/images/tc_favicon180.png" sizes="180x180">
-	<script src="/assets/js/script.js">
+        <!--iOS -->
+        <!--<link rel="apple-touch-icon" href="/path/to/favicon-120.png" sizes="120x120">-->
+        <!--<link rel="apple-touch-icon" href="path/to/favicon-152.png" sizes="152x152">-->
+        <link rel="apple-touch-icon" href="/assets/images/tc_favicon180.png" sizes="180x180">
+        {% feed_meta %}
+        {% seo %}
+    </head>
+    <body>
+        <!--SCROLL INDICATOR	-->
+        <div class="scroll-indicator">
+            <div class="progress-container" id="myBarBackground">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
 
-	{% feed_meta %}
-	{% seo %}
-  </head>
-  <body>
-<!--SCROLL INDICATOR	-->
-	<div class="scroll-indicator">
-		<div class="progress-container" id="myBarBackground">
-			<div class="progress-bar" id="myBar"></div>
-		</div>
-	</div>
-
-    {{ content }}
-  </body>
+        {{content}}
+    </body>
 </html>
