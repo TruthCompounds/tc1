@@ -14,6 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="/assets/css/styles.css">
+        <script  src="/assets/js/bn.js"></script>
         <script src="/assets/js/script.js"></script>
         <!-- generics -->
         <link rel="icon" href="/assets/images/tc_favicon32.png" sizes="32x32">
@@ -33,13 +34,29 @@
         {% seo %}
     </head>
     <body>
-        <!--SCROLL INDICATOR	-->
-        <div class="scroll-indicator">
-            <div class="progress-container" id="myBarBackground">
-                <div class="progress-bar" id="myBar"></div>
-            </div>
-        </div>
+		<h1> TRUTH COMPOUNDS </h1>
+		<div class="flexParent">
 
-        {{content}}
+			<!--SCROLL INDICATOR	-->
+			<div class="scroll-indicator">
+				<div class="progress-container" id="myBarBackground">
+					<div class="progress-bar" id="myBar"></div>
+				</div>
+			</div>
+
+			<div class="posts">
+				{{content}}
+			</div>
+
+			<div class="eth">	
+				<h1 class="donate">$$$</h1>
+				<span id="eth1" class="donate">1.</span>
+				<button class="enableEthereumButton btn">Enable Ethereum</button>
+				<span id="eth2" class="donate">2.</span>
+				<button class="sendEthButton btn">Send Eth</button>
+				<span id="eth3" class="donate"></span>
+			</div>
+		</div>
+
     </body>
 </html>

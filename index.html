@@ -3,31 +3,27 @@
 title: Home
 ---
 
-<h1> TRUTH COMPOUNDS </h1>
-
-
-{% for item in site.posts %}
-<div class="postdiv">
-    <li class="post">
-		<div class="grid-container">
-			<div class="grid-child">
-				<h3> {{ item.title }} </h3>
+	{% for item in site.posts %}
+	<div class="postdiv">
+		<li class="post">
+			<div class="grid-container">
+				<div class="grid-child">
+					<h3> {{ item.title }} </h3>
+				</div>
+				<div class="grid-child">
+					<span class="nowrap">
+						<button class="collapseBtn"
+								id="b{{forloop.index0}}"
+								onclick="collapse('{{forloop.index0}}')">
+							hide
+						</button>
+					</span>
+				</div>
 			</div>
-			<div class="grid-child">
-				<span class="nowrap">
-					<button class="collapseBtn"
-							id="b{{forloop.index0}}"
-							onclick="collapse('{{forloop.index0}}')">
-						hide
-					</button>
-				</span>
+			<div id="{{forloop.index0}}">
+				{{ item.content }}
 			</div>
-		</div>
-        <div id="{{forloop.index0}}">
-            {{ item.content }}
-        </div>
-    </li>
-</div>
-<hr/>
-{% endfor %}
-
+		</li>
+	</div>
+	<hr/>
+	{% endfor %}
