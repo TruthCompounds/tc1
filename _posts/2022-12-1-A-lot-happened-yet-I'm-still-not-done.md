@@ -1,5 +1,5 @@
 ---
-title: A lot happened, I'm still not done
+title: A lot happened, yet I'm still not done
 ---
 
 Truth is yet to be found. 
@@ -16,8 +16,10 @@ Fukk Sleep. I'm avoiding the Truth when sleeping all day. And Carbs make me slee
 
 	
 
-2. Truth is Understanding. Understanding the underlying cause of the appearence places it in you hands. Understanding is the solution to any problem. Also listen to [Master Kapil Gupta speaking about solutions to problems.](https://www.youtube.com/watch?v=sBtuqpNZwio)
+2. Sincerity is honesty about not understanding. It causes the questioning of one's set in stone assumptions. Insencere questions don't solve problems.
 
 	
 
-3. 
+3. > The Solution to a Problem lies squarely deep in Understanding the problem --- Kapil Gupta, MD 
+	>
+	> Also listen to <a href="https://www.youtube.com/watch?v=sBtuqpNZwio" target="_blank" rel="noopener">Master Kapil Gupta speaking about solutions to problems</a>.

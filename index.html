@@ -13,14 +13,14 @@ title: Home
 				<div class="grid-child">
 					<span class="nowrap">
 						<button class="collapseBtn"
-								id="b{{forloop.index0}}"
-								onclick="collapse('{{forloop.index0}}')">
+								id="b{{forloop.rindex}}"
+								onclick="collapse('{{forloop.rindex}}')">
 							hide
 						</button>
 					</span>
 				</div>
 			</div>
-			<div id="{{forloop.index0}}">
+			<div id="{{forloop.rindex}}">
 				{{ item.content }}
 			</div>
 		</li>

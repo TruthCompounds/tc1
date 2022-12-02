@@ -17,83 +17,157 @@ function myFunction() {
   //document.getElementById("myBarBackground").style.height = scrolled + "%";
 }
 
+//collapse posts
 function collapse(index) {
-	var postContentDiv = document.getElementById(index);
-	var postContentBtn = document.getElementById('b' + index);
-	var disp = postContentDiv.style.display;
-	if (disp === '') 
-	{
-		postContentDiv.style.display = 'none';
-		postContentBtn.innerText = 'show ' + String.fromCodePoint(128065);
-	} 
-	else if (disp === 'none') 
-	{
-		postContentDiv.style.display = '';
-		postContentBtn.innerText = 'hide';
-	}
+  is_hidden = false;
+  var postContentDiv = document.getElementById(index);
+  var postContentBtn = document.getElementById("b" + index);
+  var disp = postContentDiv.style.display;
+  if (disp === "") {
+    postContentDiv.style.display = "none";
+    postContentBtn.innerText = "show " + String.fromCodePoint(128065);
+    is_hidden = true;
+  } else if (disp === "none") {
+    postContentDiv.style.display = "";
+    postContentBtn.innerText = "hide";
+  }
+
+  let hiddens = JSON.parse(localStorage.getItem("hidden_posts"));
+  if (hiddens == null) {
+    hiddens = {};
+  }
+  if (is_hidden) {
+    hiddens[index] = "1";
+  } else {
+    delete hiddens[index];
+  }
+
+  localStorage.setItem("hidden_posts", JSON.stringify(hiddens));
 }
+
+//collapse onload
+function hideHiddens(){
+	const hiddens = JSON.parse(localStorage.getItem("hidden_posts"));
+	if (hiddens) {
+		for (const i in hiddens) {
+		  var postContentDiv = document.getElementById(i);
+		  var postContentBtn = document.getElementById("b" + i);
+  		  var disp = postContentDiv.style.display;
+		  postContentDiv.style.display = "none";
+		  postContentBtn.innerText = "show " + String.fromCodePoint(128065);
+		}
+	}
+};
+window.addEventListener("load", hideHiddens); 
 
 //eth buttons
-window.onload = function doEth() {
-	const ethereumButton = document.querySelector('.enableEthereumButton');
-	const sendEthButton = document.querySelector('.sendEthButton');
+function doEth() {
+  const ethereumButton = document.querySelector(".enableEthereumButton");
+  const sendEthButton = document.querySelector(".sendEthButton");
 
-	let accounts = [];
+  let accounts = [];
 
-	//Big Num in JavaScript
+  //Big Num in JavaScript
 
-	//1$ worth of eth in wei
-	var oneDoll = new BN('5000000000000000', 10);
-	//var oneDollInHexString = oneDoll.toString(16, 16);
-	var oneDollInHexString = '0x' + oneDoll.toJSON();
+  //1$ worth of eth in wei
+  var oneDoll = new BN("5000000000000000", 10);
+  //var oneDollInHexString = oneDoll.toString(16, 16);
+  var oneDollInHexString = "0x" + oneDoll.toJSON();
 
-	//Sending Ethereum to an address
-	sendEthButton.addEventListener('click', function(){
-	  ethereum
-		.request({
-		  method: 'eth_sendTransaction',
-		  params: [
-			{
-			  from: accounts[0],
-			  to: '0xb9595C4F184729592421681f86e4aBDBFD4cd9a2',
-			  value: oneDollInHexString,
-			  gas: '0x5208',
-			  //gasLimit: '0x7530',
-			  //gasPrice: '0x09184e72a000',
-			},
-		  ],
-		})
-		.then((txHash) => {
-			console.log(txHash);
-			let eth2 = document.getElementById('eth2');		  
-			eth2.innerText='2. Done!';
-			eth2.style.color='green';
-			let eth3 = document.getElementById('eth3');
-			eth3.innerText='Wow, ... thank you for caring, Stranger!';
-						  
-						  })
-		.catch((error) => console.error);
-	});
+  //Sending Ethereum to an address
+  sendEthButton.addEventListener("click", function () {
+    ethereum
+      .request({
+        method: "eth_sendTransaction",
+        params: [
+          {
+            from: accounts[0],
+            to: "0xb9595C4F184729592421681f86e4aBDBFD4cd9a2",
+            value: oneDollInHexString,
+            gas: "0x5208",
+            //gasLimit: '0x7530',
+            //gasPrice: '0x09184e72a000',
+          },
+        ],
+      })
+      .then((txHash) => {
+        console.log(txHash);
+        let eth2 = document.getElementById("eth2");
+        eth2.innerText = "2. Done!";
+        eth2.style.color = "green";
+        let eth3 = document.getElementById("eth3");
+        eth3.innerText = "Wow, ... thank you for caring, Stranger!";
+      })
+      .catch((error) => console.error);
+  });
 
-	ethereumButton.addEventListener('click', () => {
-	  getAccount();
-	});
+  ethereumButton.addEventListener("click", () => {
+    getAccount();
+  });
 
-	async function getAccount() {
-		try {
-	  		accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-			let eth1 = document.getElementById("eth1")
-			eth1.innerText='1. Done!';
-			eth1.style.color="green";
-		} catch (e) {
-			console.log(e);
-			let eth1 = document.getElementById("eth1")
-			eth1.innerText='1. Could not Connect';
-			eth1.style.color="red";
-		} 
+  async function getAccount() {
+    try {
+      accounts = await ethereum.request({ method: "eth_requestAccounts" });
+      let eth1 = document.getElementById("eth1");
+      eth1.innerText = "1. Done!";
+      eth1.style.color = "green";
+    } catch (e) {
+      console.log(e);
+      let eth1 = document.getElementById("eth1");
+      eth1.innerText = "1. Could not Connect";
+      eth1.style.color = "red";
+    }
+  }
+};
+window.addEventListener("load", doEth); 
+
+// Select the button / DOESN'T WORK'
+//const thiefBtn = document.getElementById('darkBtn');
+// Select the theme preference from localStorage
+const currentTheme = localStorage.getItem("theme");
+
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+function setCorrectTheme() {
+  if (currentTheme == "dark") {
+	  if (!prefersDarkScheme.matches) {
+		document.body.classList.add("dark-theme");
+	  } 
+    document.getElementById("darkBtn").innerText = "Jesus Mode";
+  } else if (currentTheme == "light") {
+	  if (prefersDarkScheme.matches) {
+		document.body.classList.add("light-theme");
+	  } 
+  } else if (prefersDarkScheme.matches) { //if default is dark mode
+    document.getElementById("darkBtn").innerText = "Jesus Mode";
+  }
+};
+window.addEventListener("load", setCorrectTheme); 
 
 
+function toggleDarkTheme() {
+  console.log("toggled!!!!!!!");
+  btn = document.getElementById("darkBtn");
+  if (btn.innerText == "Jesus Mode") {
+    btn.innerText = "Thief Mode";
+  } else {
+    btn.innerText = "Jesus Mode";
+  }
 
+  theme = 'light';
+
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+	if (!document.body.classList.contains("light-theme")) {
+		theme = 'dark';
 	}
+  } else {
+    document.body.classList.toggle("dark-theme");
+	if (document.body.classList.contains("dark-theme")) {
+		theme = 'dark';
+	}
+  }
+    localStorage.setItem("theme", theme);
 }
 
+ 
