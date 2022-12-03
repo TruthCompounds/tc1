@@ -8,6 +8,7 @@ Homie leave me be. Home let go of attachment to other people.
 And to Things! 
 
 **The Essentials** 
+
 1. (2) Laptop
 2. Toothbrush/Toothpaste
 3. Trimmer
@@ -63,4 +64,4 @@ And to Things!
 53. Lighter
 54. Nail Clipper
 
-I packed some *more* stuff. and realized I have been buying stuff for no reason except immediate emotional satisfaction. And then those items I keep and they keep burdening, tying down and weighing on me. I will get rid of most of my stuff. Can't bother donating or selling. Too unsure to talk to people. 
+I packed some *more* stuff. and realized I have been buying stuff for no reason except immediate emotional satisfaction. And then those items I keep and they keep burdening, tying down and weighing on me. I will get rid of most of my stuff. Can't bother donating or selling. I'm too unsure to talk to people.
