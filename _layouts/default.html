@@ -36,34 +36,39 @@
         {% seo %}
     </head>
     <body>
-		<h1> TRUTH COMPOUNDS </h1>
+		<h1 class="title"> TRUTH COMPOUNDS </h1>
+		<div class="eth">	
+			<h2 class="donate">Donate to enable me to move out of my parents home.</h2>
+			<div class="donateInnerDiv">
+			<h2 class="donate" id="donateTitle">To donate:</h2>
+			<div class="donateDiv">
+				<span class="donateSpan" class="donate">Step 1.</span>
+				<button class="">Enable Ethereum</button>
+			</div>
+			<div class="donateDiv" id="donateDivLast">
+				<span class="donateSpan" class="donate">Step 2.</span>
+				<button class="">Send Ethereum</button>
+			</div>
+		</div>
+			</div>
+		<!--SCROLL INDICATOR	-->
+		<div class="scroll-indicator">
+			<div class="progress-container" id="myBarBackground">
+				<div class="progress-bar" id="myBar"></div>
+			</div>
+		</div>
+
+		<div class="darkModeBtn" onclick="toggleDarkTheme()">
+			<button id="darkBtn">Thief Mode</button>
+		</div>
 		<!--<h3>.. is some dude searching for truth</h3>-->
 		<!--<hr id="mainHr">-->
 		<div class="flexParent">
-
-			<!--SCROLL INDICATOR	-->
-			<div class="scroll-indicator">
-				<div class="progress-container" id="myBarBackground">
-					<div class="progress-bar" id="myBar"></div>
-				</div>
-			</div>
-
-			<div class="darkModeBtn" onclick="toggleDarkTheme()">
-				<button id="darkBtn">Thief Mode</button>
-			</div>
 
 			<div class="posts">
 				{{content}}
 			</div>
 
-			<div class="eth">	
-				<h1 class="donate">$$$</h1>
-				<span id="eth1" class="donate">1.</span>
-				<button class="enableEthereumButton btn">Enable Ethereum</button>
-				<span id="eth2" class="donate">2.</span>
-				<button class="sendEthButton btn">Send Eth</button>
-				<span id="eth3" class="donate"></span>
-			</div>
 		</div>
 
     </body>
