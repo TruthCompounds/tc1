@@ -4,7 +4,7 @@ Title: Mass Slavery
 
 >  **Money is the most widespread belief system in the world.** 
 >
-> -- Truth spoken by Mark Passio
+> -- Mark Passio
 
 If money is imaginary, why do I have anxiety about not having any? 
 
