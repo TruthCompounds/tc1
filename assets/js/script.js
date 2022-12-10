@@ -25,7 +25,8 @@ function collapse(index) {
   var disp = postContentDiv.style.display;
   if (disp === "") {
     postContentDiv.style.display = "none";
-    postContentBtn.innerText = "show " + String.fromCodePoint(128065);
+	  postContentBtn.innerText = "show " + String.fromCodePoint(128065) + ' ';
+	  console.log(String.fromCodePoint(128065) + String.fromCodePoint(128065));
     is_hidden = true;
   } else if (disp === "none") {
     postContentDiv.style.display = "";
@@ -62,8 +63,8 @@ window.addEventListener("load", hideHiddens);
 
 //eth buttons
 function doEth() {
-  const ethereumButton = document.querySelector(".enableEthereumButton");
-  const sendEthButton = document.querySelector(".sendEthButton");
+  const ethereumButton = document.getElementById("enableEthButton");
+  const sendEthButton = document.getElementById("sendEthButton");
 
   let accounts = [];
 
@@ -92,11 +93,11 @@ function doEth() {
       })
       .then((txHash) => {
         console.log(txHash);
-        let eth2 = document.getElementById("eth2");
-        eth2.innerText = "2. Done!";
-        eth2.style.color = "green";
-        let eth3 = document.getElementById("eth3");
-        eth3.innerText = "Wow, ... thank you for caring, Stranger!";
+        let sendEthSpan = document.getElementById("sendEthSpan");
+        sendEthSpan.innerText = "2. Done!";
+        sendEthSpan.style.color = "green";
+        let hiddenEthSpan = document.getElementById("hiddenEthSpan");
+        hiddenEthSpan.innerText = "Wow, ... thank you for caring, Stranger!";
       })
       .catch((error) => console.error);
   });
@@ -106,23 +107,22 @@ function doEth() {
   });
 
   async function getAccount() {
+      let enableEthSpan = document.getElementById("enableEthSpan");
     try {
       accounts = await ethereum.request({ method: "eth_requestAccounts" });
-      let eth1 = document.getElementById("eth1");
-      eth1.innerText = "1. Done!";
-      eth1.style.color = "green";
+      enableEthSpan.innerText = "Step 1. Done!";
+      enableEthSpan.style.color = "green";
     } catch (e) {
       console.log(e);
-      let eth1 = document.getElementById("eth1");
-      eth1.innerText = "1. Could not Connect";
-      eth1.style.color = "red";
+      enableEthSpan.innerText = "Step 1. Could not Connect";
+      enableEthSpan.style.color = "red";
     }
   }
 };
 window.addEventListener("load", doEth); 
 
 // Select the button / DOESN'T WORK'
-//const thiefBtn = document.getElementById('darkBtn');
+//const thiefBtn = document.getElementById('darkModeBtn');
 // Select the theme preference from localStorage
 const currentTheme = localStorage.getItem("theme");
 
@@ -133,13 +133,13 @@ function setCorrectTheme() {
 	  if (!prefersDarkScheme.matches) {
 		document.body.classList.add("dark-theme");
 	  } 
-    document.getElementById("darkBtn").innerText = "Jesus Mode";
+    document.getElementById("darkModeBtn").innerText = "Jesus Mode";
   } else if (currentTheme == "light") {
 	  if (prefersDarkScheme.matches) {
 		document.body.classList.add("light-theme");
 	  } 
   } else if (prefersDarkScheme.matches) { //if default is dark mode
-    document.getElementById("darkBtn").innerText = "Jesus Mode";
+    document.getElementById("darkModeBtn").innerText = "Jesus Mode";
   }
 };
 window.addEventListener("load", setCorrectTheme); 
@@ -147,7 +147,7 @@ window.addEventListener("load", setCorrectTheme);
 
 function toggleDarkTheme() {
   console.log("toggled!!!!!!!");
-  btn = document.getElementById("darkBtn");
+  btn = document.getElementById("darkModeBtn");
   if (btn.innerText == "Jesus Mode") {
     btn.innerText = "Thief Mode";
   } else {

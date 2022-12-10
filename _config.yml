@@ -21,3 +21,6 @@ plugins:
 kramdown:
   gfm_quirks: [paragraph_end]
   hard_wrap: true
+
+sass:
+  style: expanded 
