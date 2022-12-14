@@ -35,7 +35,8 @@
         {% feed_meta %}
         {% seo %}
     </head>
-    <body>
+    <!--<body onload="setCorrectTheme()">-->
+	<body>
 		<h1 class="title"> TRUTH COMPOUNDS </h1>
 		<!--SCROLL INDICATOR	-->
 		<div class="scroll-indicator">
@@ -43,12 +44,24 @@
 				<div class="progress-bar" id="myBar"></div>
 			</div>
 		</div>
+		<div class="darkModeBtnDiv" onclick="toggleDarkTheme()">
+			<button id="darkModeBtn">Thief Mode</button>
+		</div>
+		<!--<h3>.. is some dude searching for truth</h3>-->
+		<!--<hr id="mainHr">-->
+		<div class="mainDiv">
+			<div></div>
+			<div class="postsContainer">
+		
+				<div class="posts">
+					{{content}}
+				</div>
+		
+			</div>
+		
 			<div class="donateInnerDiv">
-				<h2 class="donate" id="donateTitle" style="
-				    color: #009900;
-				    flex-wrap: nowrap;
-				    white-space: nowrap;
-				">Donate</h2>
+				<h2 class="donate" id="donateTitle" style="color: #009900; flex-wrap: nowrap; white-space: nowrap;
+							">Donate</h2>
 				<hr id="donateHr">
 				<div class="donateDiv">
 					<span class="donateSpan" id="enableEthSpan">Step 1.</span>
@@ -56,26 +69,14 @@
 						white-space: nowrap;
 						line-height: 1;
 					">Enable Ethereum</button>
-
-				<div class="donateDiv" id="donateDivLast">
-					<span class="donateSpan" id="sendEthSpan">Step 2.</span>
-					<button id="sendEthButton">Send Ethereum</button>
+			
+					<div class="donateDiv" id="donateDivLast">
+						<span class="donateSpan" id="sendEthSpan">Step 2.</span>
+						<button id="sendEthButton">Send Ethereum</button>
+					</div>
+					<span id="hiddenEthSpan"></span>
 				</div>
-				<span id="hiddenEthSpan"></span>
 			</div>
 		</div>
-		<div class="darkModeBtnDiv" onclick="toggleDarkTheme()">
-			<button id="darkModeBtn">Thief Mode</button>
-		</div>
-		<!--<h3>.. is some dude searching for truth</h3>-->
-		<!--<hr id="mainHr">-->
-		<div class="flexParent">
-
-			<div class="posts">
-				{{content}}
-			</div>
-
-		</div>
-
     </body>
 </html>

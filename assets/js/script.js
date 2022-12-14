@@ -142,7 +142,8 @@ function setCorrectTheme() {
     document.getElementById("darkModeBtn").innerText = "Jesus Mode";
   }
 };
-window.addEventListener("load", setCorrectTheme); 
+//window.addEventListener("load", setCorrectTheme); 
+document.addEventListener("DOMContentLoaded", setCorrectTheme);
 
 
 function toggleDarkTheme() {
@@ -168,6 +169,4 @@ function toggleDarkTheme() {
 	}
   }
     localStorage.setItem("theme", theme);
-}
-
- 
+} 
