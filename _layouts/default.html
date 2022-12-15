@@ -50,7 +50,7 @@
 		<!--<h3>.. is some dude searching for truth</h3>-->
 		<!--<hr id="mainHr">-->
 		<div class="mainDiv">
-			<div></div>
+			<div class="emptyDiv"></div>
 			<div class="postsContainer">
 		
 				<div class="posts">
@@ -59,23 +59,25 @@
 		
 			</div>
 		
-			<div class="donateInnerDiv">
-				<h2 class="donate" id="donateTitle" style="color: #009900; flex-wrap: nowrap; white-space: nowrap;
-							">Donate</h2>
-				<hr id="donateHr">
-				<div class="donateDiv">
-					<span class="donateSpan" id="enableEthSpan">Step 1.</span>
-					<button id="enableEthButton" style="
-						white-space: nowrap;
-						line-height: 1;
-					">Enable Ethereum</button>
+			<div class="donateOuterDiv">
+				<div class="donateInnerDiv">
+					<h2 class="donate" id="donateTitle" style="color: #009900;
+																">Donations are greatly appreciated!</h2>
+					<hr id="donateHr">
+					<div class="donateDiv">
+						<span class="donateSpan" id="enableEthSpan">Step 1.</span>
+						<button id="enableEthButton" style="
+															white-space: nowrap;
+															line-height: 1;
+														">Enable Ethereum</button>
 			
-					<div class="donateDiv" id="donateDivLast">
-						<span class="donateSpan" id="sendEthSpan">Step 2.</span>
-						<button id="sendEthButton">Send Ethereum</button>
+						<div class="donateDiv" id="donateDivLast">
+							<span class="donateSpan" id="sendEthSpan">Step 2.</span>
+							<button id="sendEthButton">Send Ethereum</button>
+						</div>
+						<span id="hiddenEthSpan"></span>
 					</div>
-					<span id="hiddenEthSpan"></span>
-				</div>
+				</div>			
 			</div>
 		</div>
     </body>

@@ -204,7 +204,7 @@ img {
 .postsContainer {
 	display: flex;
 	flex-direction: column;
-	width: 65%;
+	//width: 65%;
 	margin: auto;
 }
 
@@ -315,11 +315,14 @@ img {
 }
 
 .donateInnerDiv {
+	display: flex;
+	flex-direction: column;
 	border: 2px var(--color) dashed;
-	padding: 5px;
+	padding: 0.5em;
+	margin: auto 1%;
 	position: fixed;
-	right: 0%;
-	width: 160px;
+	//right: 0%;
+	//width: 160px;
 }
 
 #donateTitle {
@@ -341,16 +344,24 @@ img {
 
 .separatorSvg {
 	display: block;
-	margin: auto;
+	margin: 2em auto;
 	height: 30px;
 	width: 30px;
 }
 
 .mainDiv {
 	display: grid;
-	grid-auto-columns: auto auto auto;
+	grid-auto-columns: 1fr 4fr 1fr;
+	grid-auto-flow: column;
+
 }
 
+.donateOuterDiv {
+	display: flex;
+	//justify-content: center;
+    align-items: flex-start;
+	padding: 5%;
+}
 //smol screen
 
 @media screen and (max-width: 1007px) {
@@ -362,8 +373,12 @@ img {
 	.postDiv {
 		width: 90%;
 		/* The width is 100%, when the viewport is 800px or smaller */
-		margin: 5% auto;
+		//margin: 5% auto;
 		min-width: auto;
+	}
+
+	.postTitle {
+		margin: 10% auto 5% auto;
 	}
 
 	p {
@@ -405,6 +420,28 @@ img {
 
 	.donateInnerDiv {
 		position: relative;
+		flex-grow: 1;
+	}
+
+	.mainDiv {
+		//grid-auto-flow: row;
+		display: flex;
+		flex-direction: column;
+
+	}
+
+//rearrange donate to be on top 
+	.emptyDiv {
+		order: 3;
+	}
+
+	.postsContainer {
+		order: 2;
+	}
+
+	.donateOuterDiv {
+		order: 1;
+		margin: 1em auto;
 	}
 
 }
