@@ -71,9 +71,12 @@ function doEth() {
   //Big Num in JavaScript
 
   //1$ worth of eth in wei
-  var oneDoll = new BN("5000000000000000", 10);
-  //var oneDollInHexString = oneDoll.toString(16, 16);
-  var oneDollInHexString = "0x" + oneDoll.toJSON();
+	//let oneDoll = new BN("5000000000000000", 10);
+	
+	let oneDoll = 5000000000000000;
+
+  console.log(oneDoll.toString());
+  var oneDollInHexString = "0x" + oneDoll.toString(16);
 
   //Sending Ethereum to an address
   sendEthButton.addEventListener("click", function () {
@@ -119,7 +122,7 @@ function doEth() {
     }
   }
 };
-window.addEventListener("load", doEth); 
+window.addEventListener("DOMContentLoaded", doEth); 
 
 // Select the button / DOESN'T WORK'
 //const thiefBtn = document.getElementById('darkModeBtn');
@@ -170,3 +173,52 @@ function toggleDarkTheme() {
   }
     localStorage.setItem("theme", theme);
 } 
+
+let titleFont;
+
+function loadTitleFont() {
+		//"font-family: 'Aref Ruqaa Ink', serif;",
+	let fonts = [
+		{"name": "Aref Ruqaa Ink", 		 "link": "https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700"},
+		{"name": "Bellefair", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Bellefair"},
+		{"name": "BIZ UDMincho", 	 	 "link": "https://fonts.googleapis.com/css2?&family=BIZ+UDMincho"},
+		{"name": "Bodoni Moda", 	 	 "link": "https://fonts.googleapis.com/css2?&family=Bodoni+Moda:opsz@6..96"},
+		{"name": "Charm", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Charm"},
+		{"name": "Cinzel", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Cinzel:wght@500"},
+		{"name": "Cormorant Garamond", 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+Garamond:ital@1"},
+		{"name": "Cormorant SC", 	 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+SC"},
+		{"name": "Cormorant Unicase", 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+Unicase"},
+		{"name": "EB Garamond", 	 	 "link": "https://fonts.googleapis.com/css2?&family=EB+Garamond"},
+		{"name": "IM Fell DW Pica SC", 	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+DW+Pica+SC"},
+		{"name": "IM Fell English", 	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+English"},
+		{"name": "IM Fell English SC",	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+English+SC"},
+		{"name": "Mate SC", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Mate+SC"},
+		{"name": "Playfair Display SC",  "link": "https://fonts.googleapis.com/css2?&family=Playfair+Display+SC"},
+		{"name": "Sorts Mill Goudy", 	 "link": "https://fonts.googleapis.com/css2?&family=Sorts+Mill+Goudy:ital@1"},
+		{"name": "Yrsa", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Yrsa"},
+		{"name": "Yuji Boku", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Yuji+Boku"}
+	];
+
+	function random_item(items) {
+		return items[Math.floor(Math.random()*items.length)];
+	};
+	
+	let ri = random_item(fonts);
+	titleFont = ri.name;
+
+	let random_font = new FontFace(ri.name, ri.link);
+	random_font.load().then(function(loaded_face) {
+		document.fonts.add(loaded_face);
+	}).catch(function(error) {
+		// error occurred
+	});
+};
+
+loadTitleFont();
+
+function setTitleFont() {
+	let element = document.querySelector('.title');
+	element.style = "font-family: '" + titleFont + "', serif;";
+};
+
+document.addEventListener("DOMContentLoaded", setTitleFont);

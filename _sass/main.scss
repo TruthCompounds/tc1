@@ -2,14 +2,14 @@
 	--dark-post-bkg: #ffffff1c;
 	--light-post-bkg: #f6f6f6;
 	--post-bkg-color: var(--light-post-bkg);
-	--light-bkg-color: white;
+	--light-bkg-color: #eeeeee;
 	--dark-bkg-color: black;
 	--bkg-color: var(--light-bkg-color);
-	--light-color: black;
+	--light-color: #444;
 	--dark-color: #ffffffcf;
 	--color: var(--light-color);
 	--font-sz: 1.3em;
-	--font-sz-h1: 3em;
+	--font-sz-h1: 4em;
 	--font-sz-h3: 2em;
 	--font-sz-tablet: 1.2em;
 	--font-sz-h1-tablet: 3em;
@@ -17,7 +17,9 @@
 	--font-sz-mobile: 1.2em;
 	--font-sz-h1-mobile: 2.1em;
 	--font-sz-h3-mobile: 1.6em;
-
+	--light-title-color: #232323;
+	--dark-title-color: #dcdcdc;
+	--title-color: var(--light-title-color);
 }
 
 body {
@@ -145,6 +147,7 @@ img {
 		--post-bkg-color: var(--dark-post-bkg);
 		--bkg-color: var(--dark-bkg-color);
 		--color: var(--dark-color);
+		--title-color: var(--dark-title-color);
 	}
 
 	body {
@@ -164,10 +167,12 @@ img {
 		filter: invert(1);
 	}
 
+
 	body.light-theme {
 		--post-bkg-color: var(--light-post-bkg);
 		--bkg-color: var(--light-bkg-color);
 		--color: var(--light-color);
+		--title-color: var(--light-title-color);
 		font-family: Arial, Helvetica, sans-serif;
 
 		.separatorSvg {
@@ -178,7 +183,16 @@ img {
 }
 
 .title {
-	margin-bottom: 2%;
+	margin: 2% auto;
+	color: var(--title-color);
+	font-family: 'Cinzel', serif;
+}
+
+.mainDiv {
+	display: grid;
+	grid-auto-columns: 1fr 4fr 1fr;
+	grid-auto-flow: column;
+
 }
 
 .post {
@@ -320,7 +334,7 @@ img {
 	border: 2px var(--color) dashed;
 	padding: 0.5em;
 	margin: auto 1%;
-	position: fixed;
+	//position: fixed;
 	//right: 0%;
 	//width: 160px;
 }
@@ -340,6 +354,7 @@ img {
 
 .postContent {
 	text-align: left;
+	line-height: 1.4;
 }
 
 .separatorSvg {
@@ -349,17 +364,11 @@ img {
 	width: 30px;
 }
 
-.mainDiv {
-	display: grid;
-	grid-auto-columns: 1fr 4fr 1fr;
-	grid-auto-flow: column;
-
-}
 
 .donateOuterDiv {
-	display: flex;
+	//display: flex;
 	//justify-content: center;
-    align-items: flex-start;
+    //align-items: flex-start;
 	padding: 5%;
 }
 //smol screen
