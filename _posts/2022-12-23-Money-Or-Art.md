@@ -1,0 +1,5 @@
+---
+title: Money Or Art
+
+---
+

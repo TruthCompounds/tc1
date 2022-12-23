@@ -222,3 +222,34 @@ function setTitleFont() {
 };
 
 document.addEventListener("DOMContentLoaded", setTitleFont);
+
+function animateTalisman() {
+	let current_rotation = 90;
+	let logo = document.querySelector(".titleLogo");
+	logo.style.transition = "transform 0.5s ease-in;"
+	logo.style.transform = "rotate(" + current_rotation + "deg)";
+
+	function step() {
+    if (current_rotation > 360) {
+      current_rotation = 0;
+    }
+    current_rotation += 0.1;
+
+    logo.style.transform = "rotate(" + current_rotation + "deg)";
+    window.requestAnimationFrame(step);
+  }
+
+	window.requestAnimationFrame(step);
+}
+
+
+function animateTalismanSpin() {
+	let logo = document.querySelector(".titleLogo");
+	let deg = logo.style.transform;
+	let degN = parseInt(deg.split("(")[1].split("d")[0], 10) + 30;
+	console.log(degN);
+	logo.style.transform = "rotate(" + degN + "deg)";	
+	setTimeout(alert("mamiko"), 4000);
+}
+
+document.addEventListener("DOMContentLoaded", animateTalisman);

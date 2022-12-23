@@ -183,9 +183,14 @@ img {
 }
 
 .title {
-	margin: 2% auto;
+	margin: 2% auto 2% 2%;
 	color: var(--title-color);
 	font-family: 'Cinzel', serif;
+	white-space: nowrap;
+}
+
+.titleDiv {
+	text-align: center;
 }
 
 .mainDiv {
@@ -364,12 +369,21 @@ img {
 	width: 30px;
 }
 
-
 .donateOuterDiv {
 	//display: flex;
 	//justify-content: center;
     //align-items: flex-start;
 	padding: 5%;
+}
+
+.titleLogo {
+	width: 50px;
+}
+
+.titleGridContainer {
+	display: inline-grid;
+    grid-auto-flow: column;
+	align-items: center;
 }
 //smol screen
 
