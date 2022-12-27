@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-		  <!-- Google tag (gtag.js) -->
+		   <!--Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-NWRNQSFL9N"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -10,36 +10,36 @@
 
 		  gtag('config', 'G-NWRNQSFL9N');
 		</script>      
+		<link rel="stylesheet" href="/assets/css/styles.css">
 		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ page.title }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ page.title }}</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800">
 		<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/css/styles.css">
-        <script src="/assets/js/script.js"></script>
-        <!-- generics -->
-        <link rel="icon" href="/assets/images/fav32.png" sizes="32x32">
-        <link rel="icon" href="/assets/images/fav128.png" sizes="128x128">
-        <link rel="icon" href="/assets/images/fav192.png" sizes="192x192">
-        <link rel="icon" href="/assets/images/fav228.png" sizes="228x228">
+		<script src="/assets/js/script.js"></script>
+        <!--[> generics <]-->
+		<link rel="icon" href="/assets/images/fav32.png" sizes="32x32">
+		<link rel="icon" href="/assets/images/fav128.png" sizes="128x128">
+		<link rel="icon" href="/assets/images/fav192.png" sizes="192x192">
+		<link rel="icon" href="/assets/images/fav228.png" sizes="228x228">
 
-        <!-- Android -->
-        <!--link rel="shortcut icon" sizes="196x196"
-         href=“/path/to/favicon-196.png"-->
+        <!--[> Android <]-->
+		<link rel="shortcut icon" sizes="196x196" href="/path/to/favicon-196.png">
 
-        <!--iOS -->
-        <!--<link rel="apple-touch-icon" href="/path/to/favicon-120.png" sizes="120x120">-->
-        <!--<link rel="apple-touch-icon" href="path/to/favicon-152.png" sizes="152x152">-->
-        <link rel="apple-touch-icon" href="/assets/images/tc_favicon180.png" sizes="180x180">
-        {% feed_meta %}
-        {% seo %}
+        <!--[>iOS <]-->
+		<link rel="apple-touch-icon" href="/path/to/favicon-120.png" sizes="120x120">
+		<link rel="apple-touch-icon" href="path/to/favicon-152.png" sizes="152x152">
+		<link rel="apple-touch-icon" href="/assets/images/tc_favicon180.png" sizes="180x180">
+		{% feed_meta %}
+		{% seo %}
     </head>
     <!--<body onload="setCorrectTheme()">-->
 	<body>
 		<div class="titleDiv">
 			<div class="titleGridContainer">
-				<img onclick="animateTalismanSpin()" class="titleLogo" src="assets/images/talisman.svg">
+				<img onclick="animateTalismanSpin()" class="titleLogo" id="firstLogo" src="assets/images/talisman.svg">
 				<h1 class="title">Talisman Of Truth</h1>
+				<img onclick="animateTalismanSpin()" class="titleLogo" id="secondLogo" src="assets/images/talisman.svg">
 			</div>
 		</div>
 		<!--SCROLL INDICATOR	-->
@@ -55,26 +55,13 @@
 		<!--<hr id="mainHr">-->
 		<div class="mainDiv">
 			<div class="emptyDiv"></div>
-			<div class="postsContainer">
-		
-				<div class="posts">
-					{{content}}
-				</div>
-		
-			</div>
-		
 			<div class="donateOuterDiv">
 				<div class="donateInnerDiv">
-					<h2 class="donate" id="donateTitle" style="color: #009900;
-																">Donations are greatly appreciated!</h2>
+					<h2 class="donate" id="donateTitle">Smile a Brother</h2>
 					<hr id="donateHr">
 					<div class="donateDiv">
 						<span class="donateSpan" id="enableEthSpan">Step 1.</span>
-						<button id="enableEthButton" style="
-															white-space: nowrap;
-															line-height: 1;
-														">Enable Ethereum</button>
-			
+						<button id="enableEthButton">Enable Ethereum</button>
 						<div class="donateDiv" id="donateDivLast">
 							<span class="donateSpan" id="sendEthSpan">Step 2.</span>
 							<button id="sendEthButton">Send Ethereum</button>
@@ -82,6 +69,11 @@
 						<span id="hiddenEthSpan"></span>
 					</div>
 				</div>			
+			</div>
+			<div class="postsContainer">
+				<div class="posts">
+					{{content}}
+				</div>
 			</div>
 		</div>
     </body>

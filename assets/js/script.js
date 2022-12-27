@@ -179,24 +179,24 @@ let titleFont;
 function loadTitleFont() {
 		//"font-family: 'Aref Ruqaa Ink', serif;",
 	let fonts = [
-		{"name": "Aref Ruqaa Ink", 		 "link": "https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700"},
-		{"name": "Bellefair", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Bellefair"},
-		{"name": "BIZ UDMincho", 	 	 "link": "https://fonts.googleapis.com/css2?&family=BIZ+UDMincho"},
-		{"name": "Bodoni Moda", 	 	 "link": "https://fonts.googleapis.com/css2?&family=Bodoni+Moda:opsz@6..96"},
-		{"name": "Charm", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Charm"},
-		{"name": "Cinzel", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Cinzel:wght@500"},
-		{"name": "Cormorant Garamond", 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+Garamond:ital@1"},
-		{"name": "Cormorant SC", 	 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+SC"},
-		{"name": "Cormorant Unicase", 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+Unicase"},
-		{"name": "EB Garamond", 	 	 "link": "https://fonts.googleapis.com/css2?&family=EB+Garamond"},
-		{"name": "IM Fell DW Pica SC", 	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+DW+Pica+SC"},
-		{"name": "IM Fell English", 	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+English"},
-		{"name": "IM Fell English SC",	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+English+SC"},
-		{"name": "Mate SC", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Mate+SC"},
-		{"name": "Playfair Display SC",  "link": "https://fonts.googleapis.com/css2?&family=Playfair+Display+SC"},
-		{"name": "Sorts Mill Goudy", 	 "link": "https://fonts.googleapis.com/css2?&family=Sorts+Mill+Goudy:ital@1"},
-		{"name": "Yrsa", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Yrsa"},
-		{"name": "Yuji Boku", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Yuji+Boku"}
+		{"name": "Aref Ruqaa Ink", 		 "link": "https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap"},
+		{"name": "Bellefair", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Bellefair&display=swap"},
+		{"name": "BIZ UDMincho", 	 	 "link": "https://fonts.googleapis.com/css2?&family=BIZ+UDMincho&display=swap"},
+		{"name": "Bodoni Moda", 	 	 "link": "https://fonts.googleapis.com/css2?&family=Bodoni+Moda:opsz@6..96&display=swap"},
+		{"name": "Charm", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Charm&display=swap"},
+		{"name": "Cinzel", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Cinzel:wght@500&display=swap"},
+		{"name": "Cormorant Garamond", 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+Garamond:ital@1&display=swap"},
+		{"name": "Cormorant SC", 	 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+SC&display=swap"},
+		{"name": "Cormorant Unicase", 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+Unicase&display=swap"},
+		{"name": "EB Garamond", 	 	 "link": "https://fonts.googleapis.com/css2?&family=EB+Garamond&display=swap"},
+		{"name": "IM Fell DW Pica SC", 	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+DW+Pica+SC&display=swap"},
+		{"name": "IM Fell English", 	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+English&display=swap"},
+		{"name": "IM Fell English SC",	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+English+SC&display=swap"},
+		{"name": "Mate SC", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Mate+SC&display=swap"},
+		{"name": "Playfair Display SC",  "link": "https://fonts.googleapis.com/css2?&family=Playfair+Display+SC&display=swap"},
+		{"name": "Sorts Mill Goudy", 	 "link": "https://fonts.googleapis.com/css2?&family=Sorts+Mill+Goudy:ital@1&display=swap"},
+		{"name": "Yrsa", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Yrsa&display=swap"},
+		{"name": "Yuji Boku", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Yuji+Boku&display=swap"}
 	];
 
 	function random_item(items) {
@@ -210,7 +210,7 @@ function loadTitleFont() {
 	random_font.load().then(function(loaded_face) {
 		document.fonts.add(loaded_face);
 	}).catch(function(error) {
-		// error occurred
+		console.log(error);
 	});
 };
 
@@ -224,18 +224,19 @@ function setTitleFont() {
 document.addEventListener("DOMContentLoaded", setTitleFont);
 
 function animateTalisman() {
-	let current_rotation = 90;
-	let logo = document.querySelector(".titleLogo");
-	logo.style.transition = "transform 0.5s ease-in;"
-	logo.style.transform = "rotate(" + current_rotation + "deg)";
+	let current_rotation = 0;
+	let logos = document.querySelectorAll(".titleLogo");
 
 	function step() {
     if (current_rotation > 360) {
       current_rotation = 0;
     }
-    current_rotation += 0.1;
+    current_rotation += 0.2;
 
-    logo.style.transform = "rotate(" + current_rotation + "deg)";
+	logos.forEach(e => {
+		e.style.transition = "transform 0.5s ease-in;"; 
+		e.style.transform = "rotate(" + current_rotation + "deg)";
+	});
     window.requestAnimationFrame(step);
   }
 

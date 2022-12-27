@@ -183,10 +183,11 @@ img {
 }
 
 .title {
-	margin: 2% auto 2% 2%;
+	margin: 2% auto;
 	color: var(--title-color);
 	font-family: 'Cinzel', serif;
 	white-space: nowrap;
+	text-align: center;
 }
 
 .titleDiv {
@@ -347,6 +348,12 @@ img {
 #donateTitle {
 	margin-top: auto;
 	margin-bottom: 2%;
+	color: #009900;
+}
+
+#enableEthButton {
+	white-space: nowrap;
+	line-height: 1;
 }
 
 #donateHr {
@@ -374,6 +381,8 @@ img {
 	//justify-content: center;
     //align-items: flex-start;
 	padding: 5%;
+	//min-width: 150px;
+	grid-column: 3;
 }
 
 .titleLogo {
@@ -383,11 +392,16 @@ img {
 .titleGridContainer {
 	display: inline-grid;
     grid-auto-flow: column;
+	grid-auto-columns: 1fr 15fr 1fr;
 	align-items: center;
+	justify-items: center;
 }
 //smol screen
 
 @media screen and (max-width: 1007px) {
+	.titleGridContainer {
+		grid-auto-columns: 1fr 10fr 1fr;
+	}
 
 	.postsContainer {
 		width: auto;
@@ -395,7 +409,6 @@ img {
 
 	.postDiv {
 		width: 90%;
-		/* The width is 100%, when the viewport is 800px or smaller */
 		//margin: 5% auto;
 		min-width: auto;
 	}
@@ -464,12 +477,24 @@ img {
 
 	.donateOuterDiv {
 		order: 1;
-		margin: 1em auto;
+		//margin: 1em auto;
 	}
 
 }
 
 @media screen and (max-width: 640px) {
+	.titleGridContainer {
+		grid-auto-columns: 1fr 5fr 1fr;	
+	}
+
+	.titleLogo {
+		width: 40px;
+	}
+
+	//.titleGridContainer#firstLogo {
+		//margin: auto auto auto 2%;
+	//}
+
 	.postsContainer {
 		width: auto;
 	}
@@ -477,7 +502,6 @@ img {
 	.postDiv {
 		min-width: auto;
 		width: 90%;
-		/* The width is 100%, when the viewport is 800px or smaller */
 		margin: 2% auto;
 	}
 
