@@ -8,15 +8,27 @@
 	--light-color: #444;
 	--dark-color: #ffffffcf;
 	--color: var(--light-color);
-	--font-sz: 1.3em;
 	--font-sz-h1: 4em;
+	--font-sz-h2: 3em;
 	--font-sz-h3: 2em;
-	--font-sz-tablet: 1.2em;
+	--font-sz-h4: 1.8em;
+	--font-sz-h5: 1.6em;
+	--font-sz-h6: 1.4em;
+	--font-sz: 1.3em;
 	--font-sz-h1-tablet: 3em;
+	--font-sz-h2-tablet: 2.5em;
 	--font-sz-h3-tablet: 2em;
-	--font-sz-mobile: 1.2em;
+	--font-sz-h4-tablet: 1.8em;
+	--font-sz-h5-tablet: 1.6em;
+	--font-sz-h6-tablet: 1.4em;
+	--font-sz-tablet: 1.2em;
 	--font-sz-h1-mobile: 2.1em;
+	--font-sz-h2-mobile: 1.9em;
 	--font-sz-h3-mobile: 1.6em;
+	--font-sz-h4-mobile: 1.5em;
+	--font-sz-h5-mobile: 1.4em;
+	--font-sz-h6-mobile: 1.3em;
+	--font-sz-mobile: 1.2em;
 	--light-title-color: #232323;
 	--dark-title-color: #dcdcdc;
 	--title-color: var(--light-title-color);
@@ -58,14 +70,32 @@ h1 {
 
 h2 {
 	text-align: center;
+	font-size: var(--font-sz-h2);
+	margin: var(--font-sz-h2) auto;
 }
 
 h3 {
 	text-align: center;
 	font-weight: bold;
 	font-size: var(--font-sz-h3);
+	margin: var(--font-sz-h3) auto;
 	line-height: 1;
-	margin: 1em auto;
+	//margin: 1em auto;
+}
+
+h4 {
+	font-size: var(--font-sz-h4);
+	margin: var(--font-sz-h4) auto;
+}
+
+h5 {
+	font-size: var(--font-sz-h5);
+	margin: var(--font-sz-h5) auto;
+}
+
+h6 {
+	font-size: var(--font-sz-h6);
+	margin: var(--font-sz-h6) auto;
 }
 
 p {
@@ -425,9 +455,25 @@ img {
 		font-size: var(--font-sz-h1-tablet);
 	}
 
+	h2 {
+		font-size: var(--font-sz-h2-tablet);
+	}
+
 	h3 {
 		font-size: var(--font-sz-h3-tablet);
 		margin: 2% auto;
+	}
+
+	h4 {
+		font-size: var(--font-sz-h4-tablet);
+	}
+
+	h5 {
+		font-size: var(--font-sz-h5-tablet);
+	}
+
+	h6 {
+		font-size: var(--font-sz-h6-tablet);
 	}
 
 	.post li {
@@ -513,9 +559,25 @@ img {
 		font-size: var(--font-sz-h1-mobile);
 	}
 
+	h2 {
+		font-size: var(--font-sz-h2-mobile);
+	}
+
 	h3 {
 		font-size: var(--font-sz-h3-mobile);
 		margin: 3% auto;
+	}
+
+	h4 {
+		font-size: var(--font-sz-h4-mobile);
+	}
+
+	h5 {
+		font-size: var(--font-sz-h5-mobile);
+	}
+
+	h6 {
+		font-size: var(--font-sz-h6-mobile);
 	}
 
 	.post li {

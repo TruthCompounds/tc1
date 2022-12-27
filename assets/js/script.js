@@ -179,24 +179,24 @@ let titleFont;
 function loadTitleFont() {
 		//"font-family: 'Aref Ruqaa Ink', serif;",
 	let fonts = [
-		{"name": "Aref Ruqaa Ink", 		 "link": "https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap"},
-		{"name": "Bellefair", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Bellefair&display=swap"},
-		{"name": "BIZ UDMincho", 	 	 "link": "https://fonts.googleapis.com/css2?&family=BIZ+UDMincho&display=swap"},
-		{"name": "Bodoni Moda", 	 	 "link": "https://fonts.googleapis.com/css2?&family=Bodoni+Moda:opsz@6..96&display=swap"},
-		{"name": "Charm", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Charm&display=swap"},
-		{"name": "Cinzel", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Cinzel:wght@500&display=swap"},
-		{"name": "Cormorant Garamond", 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+Garamond:ital@1&display=swap"},
-		{"name": "Cormorant SC", 	 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+SC&display=swap"},
-		{"name": "Cormorant Unicase", 	 "link": "https://fonts.googleapis.com/css2?&family=Cormorant+Unicase&display=swap"},
-		{"name": "EB Garamond", 	 	 "link": "https://fonts.googleapis.com/css2?&family=EB+Garamond&display=swap"},
-		{"name": "IM Fell DW Pica SC", 	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+DW+Pica+SC&display=swap"},
-		{"name": "IM Fell English", 	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+English&display=swap"},
-		{"name": "IM Fell English SC",	 "link": "https://fonts.googleapis.com/css2?&family=IM+Fell+English+SC&display=swap"},
-		{"name": "Mate SC", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Mate+SC&display=swap"},
-		{"name": "Playfair Display SC",  "link": "https://fonts.googleapis.com/css2?&family=Playfair+Display+SC&display=swap"},
-		{"name": "Sorts Mill Goudy", 	 "link": "https://fonts.googleapis.com/css2?&family=Sorts+Mill+Goudy:ital@1&display=swap"},
-		{"name": "Yrsa", 	 	 		 "link": "https://fonts.googleapis.com/css2?&family=Yrsa&display=swap"},
-		{"name": "Yuji Boku", 	 	 	 "link": "https://fonts.googleapis.com/css2?&family=Yuji+Boku&display=swap"}
+		{"name": "Aref Ruqaa Ink", 		 "link": "url(https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap)"},
+		{"name": "Bellefair", 	 	 	 "link": "url(https://fonts.googleapis.com/css2?&family=Bellefair&display=swap)"},
+		{"name": "BIZ UDMincho", 	 	 "link": "url(https://fonts.googleapis.com/css2?&family=BIZ+UDMincho&display=swap)"},
+		{"name": "Bodoni Moda", 	 	 "link": "url(https://fonts.googleapis.com/css2?&family=Bodoni+Moda:opsz@6..96&display=swap)"},
+		{"name": "Charm", 	 	 		 "link": "url(https://fonts.googleapis.com/css2?&family=Charm&display=swap)"},
+		{"name": "Cinzel", 	 	 		 "link": "url(https://fonts.googleapis.com/css2?&family=Cinzel:wght@500&display=swap)"},
+		{"name": "Cormorant Garamond", 	 "link": "url(https://fonts.googleapis.com/css2?&family=Cormorant+Garamond:ital@1&display=swap)"},
+		{"name": "Cormorant SC", 	 	 "link": "url(https://fonts.googleapis.com/css2?&family=Cormorant+SC&display=swap)"},
+		{"name": "Cormorant Unicase", 	 "link": "url(https://fonts.googleapis.com/css2?&family=Cormorant+Unicase&display=swap)"},
+		{"name": "EB Garamond", 	 	 "link": "url(https://fonts.googleapis.com/css2?&family=EB+Garamond&display=swap)"},
+		{"name": "IM Fell DW Pica SC", 	 "link": "url(https://fonts.googleapis.com/css2?&family=IM+Fell+DW+Pica+SC&display=swap)"},
+		{"name": "IM Fell English", 	 "link": "url(https://fonts.googleapis.com/css2?&family=IM+Fell+English&display=swap)"},
+		{"name": "IM Fell English SC",	 "link": "url(https://fonts.googleapis.com/css2?&family=IM+Fell+English+SC&display=swap)"},
+		{"name": "Mate SC", 	 	 	 "link": "url(https://fonts.googleapis.com/css2?&family=Mate+SC&display=swap)"},
+		{"name": "Playfair Display SC",  "link": "url(https://fonts.googleapis.com/css2?&family=Playfair+Display+SC&display=swap)"},
+		{"name": "Sorts Mill Goudy", 	 "link": "url(https://fonts.googleapis.com/css2?&family=Sorts+Mill+Goudy:ital@1&display=swap)"},
+		{"name": "Yrsa", 	 	 		 "link": "url(https://fonts.googleapis.com/css2?&family=Yrsa&display=swap)"},
+		{"name": "Yuji Boku", 	 	 	 "link": "url(https://fonts.googleapis.com/css2?&family=Yuji+Boku&display=swap)"}
 	];
 
 	function random_item(items) {
