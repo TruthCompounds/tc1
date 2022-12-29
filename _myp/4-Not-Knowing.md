@@ -1,5 +1,8 @@
 ---
-title: Not Knowing
+title: "4/ Not Knowing"
+date: 2022/11/28
+pid: 4
+
 ---
 
 Not knowing anything is direct freedom. And not knowing continuously must be the shortest path to Truth. Not knowing anything for sure is the surest Truth you can know. Anything I question enough brings me to not knowing. The knowing is the illusion. It is the biggest Illusion.

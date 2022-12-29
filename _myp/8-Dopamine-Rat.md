@@ -1,5 +1,8 @@
 ---
-title: Dopamine Rat
+title: "8/ Dopamine Rat"
+date: 2022/12/3
+pid: 8
+
 ---
 
 FUCK YEAH

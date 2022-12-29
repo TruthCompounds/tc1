@@ -1,5 +1,8 @@
 ---
-title: Tell The Truth Even If It May Hurt
+title: "3/ Tell The Truth Even If It May Hurt"
+date: 2022/11/27
+pid: 3
+
 ---
 
 A huge mistake i've been making is trying to avoid pain and suffering by not going all the way when telling the truth. I've always resorted to telling the truth when the suffering was already overdue and even then I didn't tell the truth just as it is just to avoid inflicting pain either on others or myself. I said partial truths, I didn't go all the way in saying what I thought. I approached the truth from one side but never really got to it. I avoided circling the truth to zero in on it. This is a bit abstract but those are the images my mind throws. I avoided telling the whole truth of my thoughts because that made me vulnerable. Because then there would arise the possibility of me being wrong. Of me starting a fire that wasn't necessary. 

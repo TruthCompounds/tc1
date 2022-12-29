@@ -1,6 +1,8 @@
 collections:
   authors:
     output: true
+  myp:
+    sort_by: pid
 
 defaults:
   - scope:

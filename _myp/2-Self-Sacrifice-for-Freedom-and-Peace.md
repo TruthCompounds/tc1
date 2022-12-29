@@ -1,17 +1,18 @@
-﻿---
-title: "#2 - Self-sacrifice for Freedom & Peace"
+---
+title: "2/ Self-sacrifice for Freedom & Peace"
+date: 2022/11/25
+pid: 2
+
 ---
 
-
-
 > What or whoever one is attached to, is ones master. --- Kapil Gupta
- 
+
 My Father is my master. 
 Cigarettes are my masters. 
 My "Friends" are my masters. 
 My sisters are my masters.
 My Mom is my master.
- 
+
 My Brother is very sweet. 
 
 I'm allowing myself to be a slave. I'm choosing to be a slave. I'm choosing to be a slave to my fear. Of the fear of survival, I like to believe. But really I'm just a coward. I'm uncomfortable changing the environment, so I became a bussy. A bussy is a familiar pussy. One that you have given up on changing. 

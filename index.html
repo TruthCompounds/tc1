@@ -2,8 +2,8 @@
 # front matter for jekyll/liquid
 title: Home
 ---
-
-	{% for item in site.posts %}
+{% assign ordered_pages = site.myp | sort: "pid" | reverse %}
+{% for item in ordered_pages %}
 	<div class="postDiv">
 		<li class="post">
 			<div class="grid-container">

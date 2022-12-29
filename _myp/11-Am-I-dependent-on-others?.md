@@ -1,5 +1,8 @@
 ---
-Title: Am I dependent on others? 
+title: "11/ Am I dependent on others? "
+date: 2022/12/13
+pid: 11
+
 ---
 
 Of course I am. 

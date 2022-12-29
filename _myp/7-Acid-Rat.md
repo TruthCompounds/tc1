@@ -1,5 +1,8 @@
 ---
-title: Acid Rat
+title: "7/ Acid Rat"
+date: 2022/12/2
+pid: 7
+
 ---
 
 Internalized voices. 

@@ -1,5 +1,8 @@
 ---
-title: A lot happened, yet I'm still not done
+title: "6/ A lot happened, yet I'm still not done"
+date: 2022/12/1
+pid: 6
+
 ---
 
 Truth is yet to be found. 
